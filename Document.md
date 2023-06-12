@@ -1,7 +1,7 @@
 # Nucleus から Wordpress への移行手順のメモ
 
 
-  * item, category, comment のみ変換しました。
+  * item, media, category, comment のみ変換しました。
   * Nucleus の blog id は 1 固定なので注意してください。
   * 複数の書き込みユーザーに対応していません。
 
@@ -182,13 +182,13 @@ RewriteBase の「/blog/」は必要に応じて書き換えてください。
 RewriteEngine On
 RewriteBase /blog/
 RewriteCond %{QUERY_STRING} ^virtualpath=(.*)$
-RewriteRule ^index\.php$  %1/? [QSD,R=301,L]
+RewriteRule ^(.*)$  %1/? [QSD,R=301,L]
 RewriteCond %{QUERY_STRING} ^itemid=(.*)$
 RewriteRule ^(.*)$  n%1/? [QSD,R=301,L]
 RewriteRule ^item/(\d+)  n$1 [R=301,L]
 RewriteRule ^archive/1/(\d+)-(\d+)-(.*)$  $1/$2/$3 [R=301,L]
 RewriteRule ^archive/1/(\d+)-(.*)$  $1/$2 [R=301,L]
-RewriteRule ^category/(\d+)$  category/cat$1 [R=301,L]
+RewriteRule ^category/(\d+)  category/cat$1 [R=301,L]
 </IfModule>
 ```
 
