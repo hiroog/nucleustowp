@@ -1,0 +1,19 @@
+{
+    "default": {
+            "url": "https://<NEW-SERVER>/blog",
+            "user": "<USER_NAME>",
+            "pass": "<APP PASSWORD>"
+        },
+    "defaultguest": {
+            "url": "https://<NEW-SERVER>/blog",
+            "user": "<GUEST_NAME>",
+            "pass": "<GUEST APP PASSWORD>"
+        },
+    "config": {
+	"blog_id" : 1,
+    	"base_host": "<OLD-SERVER>",
+    	"media_path": "media/1",
+    	"archive_path": "archive/1",
+    	"local_media_path": "images"
+    }
+}
