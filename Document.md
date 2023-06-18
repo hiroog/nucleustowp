@@ -186,8 +186,8 @@ RewriteRule ^(.*)$  %1/? [QSD,R=301,L]
 RewriteCond %{QUERY_STRING} ^itemid=(.*)$
 RewriteRule ^(.*)$  n%1/? [QSD,R=301,L]
 RewriteRule ^item/(\d+)  n$1 [R=301,L]
-RewriteRule ^archive/1/(\d+)-(\d+)-(.*)$  $1/$2/$3 [R=301,L]
-RewriteRule ^archive/1/(\d+)-(.*)$  $1/$2 [R=301,L]
+RewriteRule ^archive/1/(\d+)-(\d+)-(\d+)  $1/$2/$3 [R=301,L]
+RewriteRule ^archive/1/(\d+)-(\d+)  $1/$2 [R=301,L]
 RewriteRule ^category/(\d+)  category/cat$1 [R=301,L]
 </IfModule>
 ```
